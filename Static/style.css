@@ -1,0 +1,81 @@
+body{
+    background-color: cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border: solid white 2px;
+    width: 25%;
+}
+input{
+    height: 40px !important;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+input::placeholder{
+ color: lightgray;
+ font-size: medium;
+ padding: 10px;
+ 
+}
+button{
+    height: 40px !important;
+    width: 100px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: lightskyblue;
+    color: white;
+
+    
+}
+
+button:hover{
+    background-color: darkblue;
+    transition: .1s;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px 10px 30px;
+    font-size: 20px;
+}
+
+a{
+    background-color: red;
+    height: 40px !important;
+    width: 100px;
+    font-size: 20px;
+    border-radius: 10px;
+    text-decoration:none !important;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+a:hover{
+    background-color: darkred;
+    transition: .1s;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    color: red;
+}
+img{
+    color: white;
+}
+
+i{
+    color: white;
+}
