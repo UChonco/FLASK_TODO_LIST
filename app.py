@@ -21,6 +21,22 @@ def delete_task(task_id):
     if 0 <= task_id < len(tasks):
         tasks.pop(task_id)
     return redirect(url_for('index'))
+@app.route('/edit/<task_id>', methods=['GET', 'POST'])
+def edit_task(task_id):
+    global tasks
+    if request.method == 'POST':
+        new_description = request.form.get('task')
+        for task in tasks:
+            if task['id'] == task_id:
+                task['description'] = new_description
+                break
+        return redirect(url_for('index'))
+    
+    task_to_edit = next((task for task in tasks if task['id'] == task_id), None)
+    if task_to_edit:
+        return render_template('edit.html', task=task_to_edit)
+    return redirect(url_for('index'))
+
     
 @app.errorhandler(404)
 def not_found_error(error):
